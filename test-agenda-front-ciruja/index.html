@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Pagina de prueba</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <style>
         .cuadro {
             width: 200px;
@@ -33,15 +34,31 @@
 
 <body>
     <ul id="lista"></ul>
-    <label for="nombre">Nombre</label>
-    <input type="text" name="nombre">
-    <label for="apellido">Apellido</label>
-    <input type="text" name="apellido">
-    <label for="observaciones">Observaciones</label>
-    <input type="text" name="observaciones">
-    <button id="enviar">Enviar</button>
-    <button id="refresh">Refresh</button>
+
+    <div class="form-group">
+        <label for="nombre">Nombre</label>
+        <input class="form-control" type="text" name="nombre">
+    </div>
+    <div class="form-group">
+        <label for="apellido">Apellido</label>
+        <input class="form-control" type="text" name="apellido" nombreCampito="lastname">
+    </div>
+    <div class="form-group">
+        <label for="observaciones">Observaciones</label>
+        <input class="form-control" type="text" name="observaciones">
+    </div>
+    <div class="d-flex flex-row justify-content-end">
+        <div class="d-flex flex-column">
+            <button class="btn btn-primary mb-1" id="enviar">Enviar</button>
+            <button class="btn btn-success" id="refresh">Recargar</button>
+        </div>
+    </div>
+
+    <a href="test.html">Otra pagina</a>
+
+
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="app.js"></script>
 </body>
 
