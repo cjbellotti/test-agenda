@@ -12,7 +12,6 @@
 
 <body>
 
-    <div id="lista" class="lista"></div>
 
     <div class="formulario">
         <div class="form-group">
@@ -29,10 +28,49 @@
             <label for="observaciones">Observaciones</label>
             <input class="form-control" type="text" id="observaciones" name="observaciones">
         </div>
+        <!-- <div class="form-group">
+            <label for="localidad">Localidad</label>
+            <select class="form-control" name="localidad" id="localidad">
+            </select>
+        </div> -->
+        <hr>
+        <h3>Domicilios</h3>
+        <div class="form-domicilio" id="form-domicilio" style="display : none;">
+            <div class="form-group">
+                <label for="calle">Calle</label>
+                <input class="form-control" type="text" id="calle" name="calle">
+            </div>
+
+            <div class="form-group">
+                <label for="numero">Numero</label>
+                <input class="form-control" type="number" id="numero" name="numero">
+            </div>
+
+            <div class="form-group">
+                <label for="piso">Piso</label>
+                <input class="form-control" type="numero" id="piso" name="piso">
+            </div>
+            <div class="form-group">
+                <label for="localidad">Localidad</label>
+                <select class="form-control" id="localidad" name="localidad">
+                </select>
+            </div>
+            <div class="form-group d-flex justify-content-end">
+                <button class="btn btn-success" onclick="saveDomicilio()" >Guardar</button>
+                <button class="btn btn-danger" onclick="cerrarFormDomicilio()" >Cancelar</button>
+            </div>
+                    
+        </div>
+        <div class="lista-domicilios" id="lista-domicilios"></div>
+        <hr>
+        <h3>Contactos</h3>
+        <div class="lista-contactos" id="lista-contactos"></div>
+        <hr>
         <div class="form-group d-flex justify-content-end">
-            <button class="btn btn-success" onclick="save()">Enviar</button>
+            <button class="btn btn-success" onclick="save()" >Enviar</button>
         </div>
     </div>
+    <div id="lista" class="lista"></div>
 
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
